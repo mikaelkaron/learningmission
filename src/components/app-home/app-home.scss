@@ -2,3 +2,12 @@
 @import "@material/textfield/mdc-text-field";
 @import "@material/floating-label/mdc-floating-label";
 @import "@material/button/mdc-button";
+
+.intro {
+    height: calc(100vh - 64px);
+    background: url(assets/classroom.jpg);
+    background-attachment: fixed;
+    color: white;
+    margin: calc(-1 * var(--mdc-layout-grid-margin-desktop));
+    padding: var(--mdc-layout-grid-margin-desktop);
+}

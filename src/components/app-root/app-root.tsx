@@ -1,4 +1,5 @@
-import { Component } from '@stencil/core';
+import { Component, Element } from '@stencil/core';
+import { MDCTopAppBar } from '@material/top-app-bar/index';
 import '@stencil/router';
 
 @Component({
@@ -7,6 +8,12 @@ import '@stencil/router';
   shadow: false
 })
 export class AppRoot {
+  @Element() el: HTMLElement;
+
+  componentDidLoad() {
+    new MDCTopAppBar(this.el.querySelector('.mdc-top-app-bar'));
+  }
+
   render() {
     return [
       <header class='mdc-top-app-bar mdc-top-app-bar--fixed'>
