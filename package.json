@@ -1,0 +1,19 @@
+{
+  "name": "@learningmission/web",
+  "private": true,
+  "version": "0.0.1",
+  "description": "LearningMission website",
+  "scripts": {
+    "build": "stencil build",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll"
+  },
+  "dependencies": {
+    "@stencil/core": "^0.18.0",
+    "@stencil/router": "^0.3.3",
+    "@stencil/sass": "^0.1.1"
+  },
+  "license": "MIT",
+  "devDependencies": {}
+}
