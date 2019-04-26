@@ -10,6 +10,13 @@
     "test.watch": "stencil test --spec --e2e --watchAll"
   },
   "dependencies": {
+    "@material/button": "^1.1.1",
+    "@material/floating-label": "^1.1.0",
+    "@material/form-field": "^1.1.0",
+    "@material/layout-grid": "^0.41.0",
+    "@material/textfield": "^1.1.1",
+    "@material/top-app-bar": "^1.1.1",
+    "@material/typography": "^1.0.0",
     "@stencil/core": "^0.18.0",
     "@stencil/router": "^0.3.3",
     "@stencil/sass": "^0.1.1"
