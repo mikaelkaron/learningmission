@@ -15,11 +15,11 @@ export class AppRoot {
 
   componentDidLoad() {
     this.topAppBar = new MDCTopAppBar(this.el.querySelector('.mdc-top-app-bar'));
-    return this.topAppBar.initialize();
+    this.topAppBar.initialize();
   }
 
   componentDidUnload() {
-    return this.topAppBar.destroy();
+    this.topAppBar.destroy();
   }
 
   render() {

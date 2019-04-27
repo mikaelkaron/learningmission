@@ -1,5 +1,6 @@
 import { Component, Element } from '@stencil/core';
 import { MDCTextField } from '@material/textfield';
+import { MDCRipple } from '@material/ripple';
 import { IconEmail } from '../../icons';
 
 @Component({
@@ -11,29 +12,37 @@ export class AppHome {
   @Element() el: HTMLElement;
 
   private textField: MDCTextField;
+  private buttonRipple: MDCRipple;
 
   componentDidLoad() {
     this.textField = new MDCTextField(this.el.querySelector('.mdc-text-field'));
-    return this.textField.initialize();
+    this.buttonRipple = new MDCRipple(this.el.querySelector('.mdc-button'));
+
+    this.textField.initialize();
+    this.buttonRipple.initialize();
   }
 
   componentDidUnload() {
-    return this.textField.destroy();
+    this.textField.destroy();
+    this.buttonRipple.destroy();
   }
 
   render() {
     return [
       <section class='intro'>
-        <h1>
-          Traditional schooling is outdated. Our mission is to replace its
-          obligated learning through duty with free learning through
-          inspiration. We are working behind the scenes at the moment.
-        </h1>
+        <div>
+          <h1>
+            Traditional schooling is outdated. Our mission is to replace its
+            obligated learning through duty with free learning through
+            inspiration.
+          </h1>
+          <h2>We are working behind the scenes at the moment.</h2>
+        </div>
       </section>,
       <div class='mdc-layout-grid'>
         <div class='mdc-layout-grid__inner'>
           <div class='mdc-layout-grid__cell mdc-layout-grid__cell--span-4'>
-            <h2>Stay tuned right here:</h2>
+            <h3>Stay tuned right here:</h3>
             <form>
               <div class='mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon'>
                 <IconEmail class='mdc-text-field__icon' />
@@ -49,7 +58,7 @@ export class AppHome {
                 </div>
               </div>
               <button
-                class='mdc-button mdc-button--raised'
+                class='mdc-button mdc-button--outlined'
                 style={{ 'margin-left': '1em' }}
               >
                 <span class='mdc-button__label'>Subscribe</span>
@@ -57,7 +66,7 @@ export class AppHome {
             </form>
           </div>
           <div class='mdc-layout-grid__cell mdc-layout-grid__cell--span-8'>
-            <h2>Why</h2>
+            <h3>Why</h3>
             <p>
               The world is constantly developing, yet traditional schooling has
               not changed its learning principles for 200 years, and every day

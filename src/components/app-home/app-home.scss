@@ -8,6 +8,14 @@
   background: url(assets/classroom.jpg);
   background-attachment: fixed;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro > div {
+  background-color: #fff3;
+  padding: 5em;
 }
 
 @media (min-width: 840px) {
