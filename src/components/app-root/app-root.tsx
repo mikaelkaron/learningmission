@@ -11,8 +11,15 @@ import '@stencil/router';
 export class AppRoot {
   @Element() el: HTMLElement;
 
+  private topAppBar: MDCTopAppBar;
+
   componentDidLoad() {
-    new MDCTopAppBar(this.el.querySelector('.mdc-top-app-bar'));
+    this.topAppBar = new MDCTopAppBar(this.el.querySelector('.mdc-top-app-bar'));
+    return this.topAppBar.initialize();
+  }
+
+  componentDidUnload() {
+    return this.topAppBar.destroy();
   }
 
   render() {

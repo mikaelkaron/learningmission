@@ -10,24 +10,33 @@ import { IconEmail } from '../../icons';
 export class AppHome {
   @Element() el: HTMLElement;
 
+  private textField: MDCTextField;
+
   componentDidLoad() {
-    new MDCTextField(this.el.querySelector('.mdc-text-field'));
+    this.textField = new MDCTextField(this.el.querySelector('.mdc-text-field'));
+    return this.textField.initialize();
+  }
+
+  componentDidUnload() {
+    return this.textField.destroy();
   }
 
   render() {
-    return (
+    return [
+      <section class='intro'>
+        <h1>
+          Traditional schooling is outdated. Our mission is to replace its
+          obligated learning through duty with free learning through
+          inspiration. We are working behind the scenes at the moment.
+        </h1>
+      </section>,
       <div class='mdc-layout-grid'>
         <div class='mdc-layout-grid__inner'>
-          <div class='mdc-layout-grid__cell mdc-layout-grid__cell--span-12 intro'>
-            <h1>
-              Traditional schooling is outdated. Our mission is to replace its
-              obligated learning through duty with free learning through
-              inspiration. We are working behind the scenes at the moment.
-            </h1>
-            <p>Stay tuned right here:</p>
+          <div class='mdc-layout-grid__cell mdc-layout-grid__cell--span-4'>
+            <h2>Stay tuned right here:</h2>
             <form>
               <div class='mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon'>
-                <IconEmail clazz='mdc-text-field__icon' />
+                <IconEmail class='mdc-text-field__icon' />
                 <input class='mdc-text-field__input' id='email' />
                 <div class='mdc-notched-outline'>
                   <div class='mdc-notched-outline__leading' />
@@ -47,7 +56,8 @@ export class AppHome {
               </button>
             </form>
           </div>
-          <div class='mdc-layout-grid__cell mdc-layout-grid__cell--span-12'>
+          <div class='mdc-layout-grid__cell mdc-layout-grid__cell--span-8'>
+            <h2>Why</h2>
             <p>
               The world is constantly developing, yet traditional schooling has
               not changed its learning principles for 200 years, and every day
@@ -71,6 +81,6 @@ export class AppHome {
           </div>
         </div>
       </div>
-    );
+    ];
   }
 }

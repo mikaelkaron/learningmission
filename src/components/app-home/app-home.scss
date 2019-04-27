@@ -1,13 +1,27 @@
-@import "@material/layout-grid/mdc-layout-grid";
-@import "@material/textfield/mdc-text-field";
-@import "@material/floating-label/mdc-floating-label";
-@import "@material/button/mdc-button";
+@import '@material/layout-grid/mdc-layout-grid';
+@import '@material/textfield/mdc-text-field';
+@import '@material/floating-label/mdc-floating-label';
+@import '@material/button/mdc-button';
 
 .intro {
-    height: calc(100vh - 64px);
-    background: url(assets/classroom.jpg);
-    background-attachment: fixed;
-    color: white;
-    margin: calc(-1 * var(--mdc-layout-grid-margin-desktop));
+  height: calc(100vh - 64px);
+  background: url(assets/classroom.jpg);
+  background-attachment: fixed;
+  color: white;
+}
+
+@media (min-width: 840px) {
+  .intro {
     padding: var(--mdc-layout-grid-margin-desktop);
+  }
+}
+@media (max-width: 839px) and (min-width: 480px) {
+  .intro {
+    padding: var(--mdc-layout-grid-margin-tablet);
+  }
+}
+@media (max-width: 479px) {
+  .intro {
+    padding: var(--mdc-layout-grid-margin-phone);
+  }
 }

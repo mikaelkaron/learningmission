@@ -7,8 +7,8 @@
 
   Any global CSS variables should also be applied here.
 */
+@import "@material/typography/mdc-typography";
+
 body {
   margin: 0;
 }
-
-@import "@material/typography/mdc-typography";
