@@ -7,7 +7,6 @@
   height: calc(100vh - 64px);
   background: url(assets/classroom.jpg);
   background-attachment: fixed;
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,6 +15,8 @@
 .intro > div {
   background-color: #fff3;
   padding: 5em;
+  text-align: center;
+  color: whitesmoke;
 }
 
 @media (min-width: 840px) {
