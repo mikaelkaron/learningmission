@@ -1,0 +1,35 @@
+{
+  "namespace": "App",
+  "fsNamespace": "app",
+  "loader": "../app.js",
+  "global": "app.global.js",
+  "core": "app.oky5mcql.js",
+  "corePolyfilled": "app.p7t00udy.js",
+  "components": {
+    "app-home": {
+      "bundleIds": {
+        "$": "hwoorugi"
+      }
+    },
+    "app-root": {
+      "bundleIds": {
+        "$": "f0hsyox3"
+      }
+    },
+    "stencil-route": {
+      "bundleIds": {
+        "$": "f0hsyox3"
+      }
+    },
+    "stencil-route-switch": {
+      "bundleIds": {
+        "$": "f0hsyox3"
+      }
+    },
+    "stencil-router": {
+      "bundleIds": {
+        "$": "f0hsyox3"
+      }
+    }
+  }
+}
