@@ -27,6 +27,10 @@ export class AppHome {
     this.buttonRipple.destroy();
   }
 
+  focusTextField(event: MouseEvent) {
+    this.textField.focus();
+    event.preventDefault();
+  }
   render() {
     return [
       <section class='intro'>
@@ -57,11 +61,8 @@ export class AppHome {
                   <div class='mdc-notched-outline__trailing' />
                 </div>
               </div>
-              <button
-                class='mdc-button mdc-button--outlined'
-                style={{ 'margin-left': '1em' }}
-              >
-                <span class='mdc-button__label'>Subscribe</span>
+              <button class='mdc-button mdc-button--outlined'>
+                <span class='mdc-button__label'>go</span>
               </button>
             </form>
           </div>
@@ -85,7 +86,7 @@ export class AppHome {
             <p>
               We have recently started and we are expanding our team of
               volunteers weekly. If you wish to help us complete our mission,
-              please get in touch.
+              please <a href="#" onClick={(event) => this.focusTextField(event)}>get in touch</a>.
             </p>
           </div>
         </div>

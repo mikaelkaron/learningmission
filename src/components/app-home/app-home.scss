@@ -19,6 +19,15 @@
   color: whitesmoke;
 }
 
+form {
+  display: flex;
+  align-items: center;
+}
+
+form button {
+  margin-left: .5em;
+}
+
 @media (min-width: 840px) {
   .intro {
     padding: var(--mdc-layout-grid-margin-desktop);
