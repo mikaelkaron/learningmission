@@ -35,7 +35,7 @@ export class AppRoot {
         </div>
       </header>,
       <div class='mdc-top-app-bar--fixed-adjust'>
-        <stencil-router>
+        <stencil-router root='/learningmission/'>
           <stencil-route-switch scrollTopOffset={0}>
             <stencil-route url='/' component='app-home' exact={true} />
           </stencil-route-switch>
