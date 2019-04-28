@@ -45,7 +45,7 @@ export class AppHome {
       </section>,
       <div class='mdc-layout-grid'>
         <div class='mdc-layout-grid__inner'>
-          <div class='mdc-layout-grid__cell mdc-layout-grid__cell--span-4'>
+          <div class='mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-8-tablet'>
             <h3>Stay tuned right here:</h3>
             <form>
               <div class='mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon'>

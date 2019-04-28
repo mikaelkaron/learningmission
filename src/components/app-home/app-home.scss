@@ -5,6 +5,7 @@
 
 .intro {
   height: calc(100vh - 64px);
+  box-sizing: border-box;
   background: url(assets/classroom.jpg);
   background-attachment: fixed;
   display: flex;
@@ -24,8 +25,12 @@ form {
   align-items: center;
 }
 
-form button {
-  margin-left: .5em;
+.mdc-text-field {
+  width: 100%;
+}
+
+.mdc-button {
+  margin-left: 0.5em;
 }
 
 @media (min-width: 840px) {
@@ -37,9 +42,20 @@ form button {
   .intro {
     padding: var(--mdc-layout-grid-margin-tablet);
   }
+  .intro > div {
+    padding: 3em;
+  }
+}
+@media (max-width: 599px) {
+  .intro {
+    height: calc(100vh - 56px);
+  }
 }
 @media (max-width: 479px) {
   .intro {
     padding: var(--mdc-layout-grid-margin-phone);
+  }
+  .intro > div {
+    padding: 1em;
   }
 }
