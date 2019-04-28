@@ -3,12 +3,12 @@
   "fsNamespace": "app",
   "loader": "../app.js",
   "global": "app.global.js",
-  "core": "app.llefndzz.js",
-  "corePolyfilled": "app.ztzpammx.js",
+  "core": "app.nquaajke.js",
+  "corePolyfilled": "app.bhlxuez7.js",
   "components": {
     "app-home": {
       "bundleIds": {
-        "$": "hwoorugi"
+        "$": "nki3butn"
       }
     },
     "app-root": {
