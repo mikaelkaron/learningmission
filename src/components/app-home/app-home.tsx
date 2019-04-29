@@ -1,7 +1,4 @@
-import { Component, Element } from '@stencil/core';
-import { MDCTextField } from '@material/textfield';
-import { MDCRipple } from '@material/ripple';
-import { IconEmail } from '../../icons';
+import { Component } from '@stencil/core';
 
 @Component({
   tag: 'app-home',
@@ -9,28 +6,13 @@ import { IconEmail } from '../../icons';
   shadow: false
 })
 export class AppHome {
-  @Element() el: HTMLElement;
+  private signup: HTMLTlmSignupElement;
 
-  private textField: MDCTextField;
-  private buttonRipple: MDCRipple;
-
-  componentDidLoad() {
-    this.textField = new MDCTextField(this.el.querySelector('.mdc-text-field'));
-    this.buttonRipple = new MDCRipple(this.el.querySelector('.mdc-button'));
-
-    this.textField.initialize();
-    this.buttonRipple.initialize();
-  }
-
-  componentDidUnload() {
-    this.textField.destroy();
-    this.buttonRipple.destroy();
-  }
-
-  focusTextField(event: MouseEvent) {
-    this.textField.focus();
+  focusSignup(event: MouseEvent) {
+    console.log(this.signup.doFocus());
     event.preventDefault();
   }
+
   render() {
     return [
       <section class='intro'>
@@ -49,24 +31,7 @@ export class AppHome {
         <div class='mdc-layout-grid__inner'>
           <div class='mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-8-tablet'>
             <h3>Stay tuned right here:</h3>
-            <form>
-              <div class='mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon'>
-                <IconEmail class='mdc-text-field__icon' />
-                <input class='mdc-text-field__input' id='email' />
-                <div class='mdc-notched-outline'>
-                  <div class='mdc-notched-outline__leading' />
-                  <div class='mdc-notched-outline__notch'>
-                    <label class='mdc-floating-label' htmlFor='email'>
-                      you@mail.com
-                    </label>
-                  </div>
-                  <div class='mdc-notched-outline__trailing' />
-                </div>
-              </div>
-              <button class='mdc-button mdc-button--outlined'>
-                <span class='mdc-button__label'>go</span>
-              </button>
-            </form>
+            <tlm-signup action='/learningmission/' ref={el => this.signup = el as HTMLTlmSignupElement} />
           </div>
           <div class='mdc-layout-grid__cell mdc-layout-grid__cell--span-8'>
             <h3>Why</h3>
@@ -88,7 +53,7 @@ export class AppHome {
             <p>
               We have recently started and we are expanding our team of
               volunteers weekly. If you wish to help us complete our mission,
-              please <a href="#" onClick={(event) => this.focusTextField(event)}>get in touch</a>.
+              please <a href="#" onClick={(event) => this.focusSignup(event)}>get in touch</a>.
             </p>
           </div>
         </div>

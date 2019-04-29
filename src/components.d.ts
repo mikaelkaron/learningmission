@@ -18,17 +18,32 @@ export namespace Components {
 
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
+
+  interface TlmSignup {
+    'action': string;
+    'doFocus': () => void;
+    'doSubmit': () => Promise<boolean>;
+    'label': string;
+    'text': string;
+  }
+  interface TlmSignupAttributes extends StencilHTMLAttributes {
+    'action': string;
+    'label'?: string;
+    'text'?: string;
+  }
 }
 
 declare global {
   interface StencilElementInterfaces {
     'AppHome': Components.AppHome;
     'AppRoot': Components.AppRoot;
+    'TlmSignup': Components.TlmSignup;
   }
 
   interface StencilIntrinsicElements {
     'app-home': Components.AppHomeAttributes;
     'app-root': Components.AppRootAttributes;
+    'tlm-signup': Components.TlmSignupAttributes;
   }
 
 
@@ -44,14 +59,22 @@ declare global {
     new (): HTMLAppRootElement;
   };
 
+  interface HTMLTlmSignupElement extends Components.TlmSignup, HTMLStencilElement {}
+  var HTMLTlmSignupElement: {
+    prototype: HTMLTlmSignupElement;
+    new (): HTMLTlmSignupElement;
+  };
+
   interface HTMLElementTagNameMap {
     'app-home': HTMLAppHomeElement
     'app-root': HTMLAppRootElement
+    'tlm-signup': HTMLTlmSignupElement
   }
 
   interface ElementTagNameMap {
     'app-home': HTMLAppHomeElement;
     'app-root': HTMLAppRootElement;
+    'tlm-signup': HTMLTlmSignupElement;
   }
 
 

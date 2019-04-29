@@ -1,7 +1,5 @@
 @import '@material/layout-grid/mdc-layout-grid';
-@import '@material/textfield/mdc-text-field';
-@import '@material/floating-label/mdc-floating-label';
-@import '@material/button/mdc-button';
+@import "@material/typography/mdc-typography";
 
 .intro {
   min-height: calc(100vh - 64px);
@@ -22,19 +20,6 @@
   text-align: center;
   color: whitesmoke;
   padding: 3rem;
-}
-
-form {
-  display: flex;
-  align-items: center;
-}
-
-.mdc-text-field {
-  width: 100%;
-}
-
-.mdc-button {
-  margin-left: 0.5rem;
 }
 
 @media (min-width: 840px) {
