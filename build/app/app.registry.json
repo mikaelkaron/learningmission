@@ -3,37 +3,37 @@
   "fsNamespace": "app",
   "loader": "../app.js",
   "global": "app.global.js",
-  "core": "app.rfphhlh2.js",
-  "corePolyfilled": "app.g2xjwpyd.js",
+  "core": "app.etwcaxba.js",
+  "corePolyfilled": "app.dndg5izo.js",
   "components": {
     "app-home": {
       "bundleIds": {
-        "$": "lodcnqjh"
+        "$": "ghgsa6j2"
       }
     },
     "app-root": {
       "bundleIds": {
-        "$": "g1qhwtaq"
+        "$": "mwce7kau"
       }
     },
     "stencil-route": {
       "bundleIds": {
-        "$": "g1qhwtaq"
+        "$": "mwce7kau"
       }
     },
     "stencil-route-switch": {
       "bundleIds": {
-        "$": "g1qhwtaq"
+        "$": "mwce7kau"
       }
     },
     "stencil-router": {
       "bundleIds": {
-        "$": "g1qhwtaq"
+        "$": "mwce7kau"
       }
     },
     "tlm-signup": {
       "bundleIds": {
-        "$": "lodcnqjh"
+        "$": "ghgsa6j2"
       }
     }
   }
