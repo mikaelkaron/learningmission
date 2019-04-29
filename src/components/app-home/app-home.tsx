@@ -36,11 +36,13 @@ export class AppHome {
       <section class='intro'>
         <div>
           <h1>
-            Traditional schooling is outdated. Our mission is to replace its
+            Traditional schooling is outdated.
+          </h1>
+          <h2>Our mission is to replace its
             obligated learning through duty with free learning through
             inspiration.
-          </h1>
-          <h2>We are working behind the scenes at the moment.</h2>
+          </h2>
+          <p>We are working behind the scenes at the moment.</p>
         </div>
       </section>,
       <div class='mdc-layout-grid'>

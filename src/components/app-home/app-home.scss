@@ -4,7 +4,7 @@
 @import '@material/button/mdc-button';
 
 .intro {
-  height: calc(100vh - 64px);
+  min-height: calc(100vh - 64px);
   box-sizing: border-box;
   background: url(assets/classroom.jpg);
   background-attachment: fixed;
@@ -13,11 +13,15 @@
   align-items: center;
 }
 
+.intro h1 {
+  @include mdc-typography(headline2)
+}
+
 .intro > div {
   background-color: #fff3;
-  padding: 5em;
   text-align: center;
   color: whitesmoke;
+  padding: 3rem;
 }
 
 form {
@@ -30,7 +34,7 @@ form {
 }
 
 .mdc-button {
-  margin-left: 0.5em;
+  margin-left: 0.5rem;
 }
 
 @media (min-width: 840px) {
@@ -42,9 +46,6 @@ form {
   .intro {
     padding: var(--mdc-layout-grid-margin-tablet);
   }
-  .intro > div {
-    padding: 3em;
-  }
 }
 @media (max-width: 599px) {
   .intro {
@@ -55,7 +56,10 @@ form {
   .intro {
     padding: var(--mdc-layout-grid-margin-phone);
   }
+  .intro h1 {
+    @include mdc-typography(headline3)
+  }
   .intro > div {
-    padding: 1em;
+    padding: 1rem;
   }
 }
