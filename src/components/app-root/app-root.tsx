@@ -1,6 +1,5 @@
 import { Component, Element } from '@stencil/core';
 import { MDCTopAppBar } from '@material/top-app-bar/index';
-import { IconMenu } from '../../icons';
 import '@stencil/router';
 
 @Component({
@@ -27,10 +26,12 @@ export class AppRoot {
       <header class='mdc-top-app-bar mdc-top-app-bar--fixed'>
         <div class='mdc-top-app-bar__row'>
           <section class='mdc-top-app-bar__section mdc-top-app-bar__section--align-start'>
-            <a href='#' class='material-icons mdc-top-app-bar__navigation-icon'>
-              <IconMenu />
-            </a>
             <span class='mdc-top-app-bar__title'>The Learning Mission</span>
+          </section>
+          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+            <a href="#" class='mdc-top-app-bar__link'>About</a>
+            <a href="#" class='mdc-top-app-bar__link'>Why</a>
+            <a href="#" class='mdc-top-app-bar__link'>Contact</a>
           </section>
         </div>
       </header>,
