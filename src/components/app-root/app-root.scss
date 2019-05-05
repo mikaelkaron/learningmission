@@ -1,7 +1,8 @@
+@import "../../theme.scss";
 @import '@material/top-app-bar/mdc-top-app-bar';
 
 .mdc-top-app-bar {
-  &__link {
+    &__link {
     @include mdc-top-app-bar-ink-color(on-primary);
     @include mdc-typography(headline6);
     @include mdc-rtl-reflexive-box(

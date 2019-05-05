@@ -16,6 +16,7 @@
     "@material/layout-grid": "^0.41.0",
     "@material/ripple": "^2.0.0",
     "@material/textfield": "^2.0.0",
+    "@material/theme": "^1.1.0",
     "@material/top-app-bar": "^2.0.0",
     "@material/typography": "^1.0.0",
     "@stencil/core": "^0.18.0",
