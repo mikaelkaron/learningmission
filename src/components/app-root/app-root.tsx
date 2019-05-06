@@ -2,6 +2,8 @@ import { Component, Element } from '@stencil/core';
 import { MDCTopAppBar } from '@material/top-app-bar/index';
 import '@stencil/router';
 
+const BASE = '/learningmission/';
+
 @Component({
   tag: 'app-root',
   styleUrl: 'app-root.scss',
@@ -29,14 +31,14 @@ export class AppRoot {
             <span class='mdc-top-app-bar__title'>The Learning Mission</span>
           </section>
           <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
-            <a href="#" class='mdc-top-app-bar__link'>About</a>
-            <a href="#" class='mdc-top-app-bar__link'>Why</a>
-            <a href="#" class='mdc-top-app-bar__link'>Contact</a>
+            <a href={`${BASE}#about`} class='mdc-top-app-bar__link'>About</a>
+            <a href={`${BASE}#why`} class='mdc-top-app-bar__link'>Why</a>
+            <a href={`${BASE}#contact`} class='mdc-top-app-bar__link'>Contact</a>
           </section>
         </div>
       </header>,
       <div class='mdc-top-app-bar--fixed-adjust'>
-        <stencil-router root='/learningmission/'>
+        <stencil-router root={BASE}>
           <stencil-route-switch scrollTopOffset={0}>
             <stencil-route url='/' component='app-home' exact={true} />
           </stencil-route-switch>
