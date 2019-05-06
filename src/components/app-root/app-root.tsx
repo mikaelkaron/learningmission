@@ -1,8 +1,7 @@
 import { Component, Element } from '@stencil/core';
 import { MDCTopAppBar } from '@material/top-app-bar/index';
 import '@stencil/router';
-
-const BASE = '/learningmission/';
+import { BASE } from '../../config';
 
 @Component({
   tag: 'app-root',
