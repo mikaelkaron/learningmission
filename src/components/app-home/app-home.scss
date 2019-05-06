@@ -1,50 +1,58 @@
+@import '../../variables';
 @import '@material/layout-grid/mdc-layout-grid';
-@import "@material/typography/mdc-typography";
+@import '@material/typography/mdc-typography';
 
-.intro {
+.splash {
   min-height: calc(100vh - 64px);
   box-sizing: border-box;
   background: url(assets/classroom.jpg);
   background-attachment: fixed;
+  background-position: center;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-}
 
-.intro h1 {
-  @include mdc-typography(headline2)
-}
-
-.intro > div {
-  background-color: #fff3;
-  text-align: center;
-  color: whitesmoke;
-  padding: 3rem;
-}
-
-@media (min-width: 840px) {
-  .intro {
-    padding: var(--mdc-layout-grid-margin-desktop);
-  }
-}
-@media (max-width: 839px) and (min-width: 480px) {
-  .intro {
-    padding: var(--mdc-layout-grid-margin-tablet);
-  }
-}
-@media (max-width: 599px) {
-  .intro {
-    height: calc(100vh - 56px);
-  }
-}
-@media (max-width: 479px) {
-  .intro {
-    padding: var(--mdc-layout-grid-margin-phone);
-  }
-  .intro h1 {
-    @include mdc-typography(headline3)
-  }
-  .intro > div {
+  > section {
+    background-color: #fff9;
+    text-align: center;
     padding: 1rem;
+
+    @media (min-width: 840px) {
+      margin: var(--mdc-layout-grid-margin-desktop);
+
+      h1 {
+        @include mdc-typography(headline3);
+      }
+    }
+    @media (min-width: 480px) and (max-width: 839px) {
+      margin: var(--mdc-layout-grid-margin-tablet);
+
+      h1 {
+        @include mdc-typography(headline4);
+      }
+    }
+    @media (max-width: 479px) {
+      margin: var(--mdc-layout-grid-margin-phone);
+
+      &:last-child {
+        margin: unset;
+        align-self: flex-end;
+      }
+
+      h1 {
+        @include mdc-typography(headline5);
+      }
+
+      h2 {
+        @include mdc-typography(headline6);
+      }
+    }
+  }
+
+  // top app bar fix
+  @media (max-width: 599px) {
+    height: calc(100vh - 56px);
   }
 }

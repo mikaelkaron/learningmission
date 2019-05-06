@@ -16,4 +16,10 @@
     overflow: hidden;
     z-index: 1;
   }
+
+  @media screen {
+    &__titles {
+      color: red
+    }
+  }
 }

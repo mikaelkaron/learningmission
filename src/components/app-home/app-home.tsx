@@ -9,32 +9,35 @@ export class AppHome {
   private signup: HTMLTlmSignupElement;
 
   focusSignup(event: MouseEvent) {
-    console.log(this.signup.doFocus());
+    this.signup.doFocus();
     event.preventDefault();
   }
 
   render() {
     return [
-      <section class='intro'>
-        <div>
+      <div class='splash'>
+        <section>
           <h1>
-            Traditional schooling is outdated.
-          </h1>
-          <h2>Our mission is to replace its
+            Traditional schooling is outdated, and our mission is to replace its
             obligated learning through duty with free learning through
             inspiration.
+          </h1>
+        </section>
+        <section>
+          <h2>
+            We are working behind the scenes at the moment, but you can stay
+            tuned right here:
           </h2>
-          <p>We are working behind the scenes at the moment.</p>
-        </div>
-      </section>,
+          <tlm-signup
+            action='/learningmission/'
+            ref={el => (this.signup = el as HTMLTlmSignupElement)}
+          />
+        </section>
+      </div>,
       <div class='mdc-layout-grid'>
         <div class='mdc-layout-grid__inner'>
-          <div class='mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-8-tablet'>
-            <h3>Stay tuned right here:</h3>
-            <tlm-signup action='/learningmission/' ref={el => this.signup = el as HTMLTlmSignupElement} />
-          </div>
-          <div class='mdc-layout-grid__cell mdc-layout-grid__cell--span-8'>
-            <h3>Why</h3>
+          <div class='mdc-layout-grid__cell mdc-layout-grid__cell--span-12'>
+            <h3 id='why'>Why</h3>
             <p>
               The world is constantly developing, yet traditional schooling has
               not changed its learning principles for 200 years, and every day
@@ -53,7 +56,11 @@ export class AppHome {
             <p>
               We have recently started and we are expanding our team of
               volunteers weekly. If you wish to help us complete our mission,
-              please <a href="#" onClick={(event) => this.focusSignup(event)}>get in touch</a>.
+              please{' '}
+              <a href='#' onClick={event => this.focusSignup(event)}>
+                get in touch
+              </a>
+              .
             </p>
           </div>
         </div>
